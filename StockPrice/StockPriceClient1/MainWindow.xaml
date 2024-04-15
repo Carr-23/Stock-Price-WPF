@@ -1,0 +1,28 @@
+﻿<Window x:Class="StockPriceClient1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StockPriceClient1"
+        mc:Ignorable="d"
+        Title="StockPrice" Height="264" Width="400"
+        ResizeMode="NoResize">
+
+    <Grid x:Name="grid" VerticalAlignment="Center" HorizontalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel x:Name="stack1" Orientation="Horizontal" Margin="10">
+            <CheckBox x:Name="checkStock1" Content="Subscribe Stock 1" Checked="stock1Checked" IsChecked="True" Unchecked="stock1Unchecked"/>
+            <Button x:Name="buttonStock1" Content="Stock 1" Background="DarkGray" MouseDoubleClick="stock1Click" Margin="10,0,0,0"/>
+        </StackPanel>
+
+        <StackPanel x:Name="stack2" Grid.Row="1" Orientation="Horizontal" Margin="10">
+            <CheckBox x:Name="checkStock2" Content="Subscribe Stock 2" Checked="stock2Checked" IsChecked="True" Unchecked="stock2Unchecked"/>
+            <Button x:Name="buttonStock2" Content="Stock 2" Background="DarkGray" MouseDoubleClick="stock2Click" Margin="10,0,0,0"/>
+        </StackPanel>
+    </Grid>
+</Window>
